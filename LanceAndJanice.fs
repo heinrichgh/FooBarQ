@@ -16,7 +16,7 @@ let dictionaryLookup char =
     | a when a >= 'a' && a <= 'z' ->
                             (
                                 dictionary
-                                |> Array.filter (fun (a, b) -> a = char)
+                                |> Array.filter (fun (a, _) -> a = char)
                                 |> Array.map snd
                             ).[0]
     | _ -> char
